@@ -7,13 +7,13 @@ let config = {
 
 const map = L.map("map", config);
 
-// Crea un layer di tile personalizzato
+
 L.TileLayer.CustomTiles = L.TileLayer.extend({
     getTileUrl: function (coords) {
         return `/tiles/${coords.z}/${coords.x}/${coords.y}`; // URL per i tile
     },
     getAttribution: function () {
-        return "<a target='_blank' href='https://loremflickr.com'>loremflickr</a>";
+        return "<a target='_blank' href='https://elpiu.github.io/RepoPortfolio-Your-GitHub-Story/'>elpiu</a>";
     },
 });
 
@@ -21,5 +21,5 @@ L.tileLayer.customTiles = function () {
     return new L.TileLayer.CustomTiles();
 };
 
-// Aggiungi il layer di tile alla mappa
+
 L.tileLayer.customTiles().addTo(map);
